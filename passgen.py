@@ -12,14 +12,10 @@ import random
 def genpass (length):
     count = 0
     passlist = []
-    letters = string.ascii_letters
-    numbers = string.digits
+    mix = (string.ascii_letters + string.digits)
 
     while count < length:
-        strascii = string.ascii_letters[random.randrange(0, 52)]
-        digits = string.digits[random.randrange(0, 10)]
-        passlist.append(strascii)
-        passlist.append(digits)
+        passlist.append(mix[random.randrange(0, 62)])
         count += 1
     return(passlist)
 
